@@ -10,7 +10,7 @@
 <br>
 
 ## 🙋‍♂️ Team members
-[<img src="https://avatars.githubusercontent.com/u/75752289?v=4" width="230px;" alt=""/](https://github.com/taemin-steve)
+|[<img src="https://avatars.githubusercontent.com/u/75752289?v=4" width="230px;" alt=""/](https://github.com/taemin-steve)
 |[<img src="https://avatars.githubusercontent.com/u/87962045?v=4" width="230px;" alt=""/>](https://github.com/DevDae) 
 |[<img src="https://avatars.githubusercontent.com/u/86273626?v=4" width="230px" >](https://github.com/ne0n9uy) 
 |[<img src="https://avatars.githubusercontent.com/u/98096178?v=4" width="230" >](https://github.com/juwon5272)
