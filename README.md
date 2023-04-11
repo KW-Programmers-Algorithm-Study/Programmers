@@ -15,10 +15,4 @@
 |[EHmin](https://github.com/iDolphin99) |[DevDae](https://github.com/DevDae) |[HyeBeen](https://github.com/ne0n9uy)| [juwon5272](https://github.com/juwon5272)|
 <br>
 
-
-[<img src="https://avatars.githubusercontent.com/u/75752289?v=4" width="200px">](https://github.com/taemin-steve)|[<img src="https://avatars.githubusercontent.com/u/87962045?v=4" width="230px;" alt=""/>](https://github.com/DevDae) |[<img src="https://avatars.githubusercontent.com/u/86273626?v=4" width="230px" >](https://github.com/ne0n9uy) |[<img src="https://avatars.githubusercontent.com/u/98096178?v=4" width="230" >](https://github.com/juwon5272)|
-|:---:|:---:|:---:|:---:|:---:|
-|[박형빈](https://github.com/iDolphin99) |[정태민](https://github.com/taemin-steve) |[최은영](https://github.com/nokcharathae)| [김동욱](https://github.com/donguk071)|[배짱이](https://github.com/Bae-hong-seob)|
-
-
 ## 🥕 Process
