@@ -16,7 +16,7 @@ def solution(nums):
     pkm={}
     mari=len(nums)//2
     for num in nums:
-        pkm[num]=hash(num)
+        pkm[num]=1
   
     answer=min(len(pkm.keys()),mari)
     print(answer) 
