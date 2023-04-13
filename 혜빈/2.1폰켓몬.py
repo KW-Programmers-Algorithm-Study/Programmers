@@ -1,3 +1,4 @@
+#1. set
 # def solution(nums): 
 #     answer = 0  #답변 초기화
 #     mari=int(len(nums)/2)  #데려갈 수 있는 최대 폰켓몬 수
@@ -9,16 +10,18 @@
 #         answer=m   #종류만큼 데려갈 수 있음 
 #     return answer
 
+#2. hash
 def solution(nums):
     answer=0
     pkm={}
-    s=0
+    mari=len(nums)//2
     for num in nums:
-        pkm[num]=1
-    print(pkm) 
-    
+        pkm[num]=hash(num)
+  
+    answer=min(len(pkm.keys()),mari)
     print(answer) 
     return answer
 
 solution([3,3,3,2,2,4])
 solution([3,1,2,3])
+solution([3, 3, 3, 2, 2, 2])
