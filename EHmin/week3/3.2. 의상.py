@@ -13,7 +13,7 @@ def clothes_set(clothes):
             my_dict[item[1]] = 1
     for _, value in my_dict.items():
         result *= (value+1) # 안입는 경우도 경우의 수에 포함 하기 위해서 +1
-    return result - 1 # 아무것도 입지 않으면 안되기 때문에 -1 
+    return result - 1 # 아무것도 입지 않으면 안되기 때문에 -1 해준다
 
 clothes = [["crow_mask", "face"], ["blue_sunglasses", "face"], ["smoky_makeup", "face"]]
 print(clothes_set(clothes))
