@@ -2,26 +2,33 @@ def solution(genres, plays):
     answer = [] #노래 장르당 2개씩 넣을 리스트
     played={} #노래당 재생 횟수 넣을 딕셔너리
     genreCnt={} #장르당 재생 횟수 셀 딕셔너리
+
+
+###장르, 플레이수를 합친 리스트 만들고 인덱스,장르,플레이 수 순으로 출력 해봄 => 플레이 수 - 장르 쌍으로 딕셔너리 삽입
+    glplList=list(zip(genres,plays))
+    for i,(gr,pl) in enumerate(glplList):
+        # print(i,gr,pl)
+        played[pl]=gr
+    print(played)
+
+    # for pl in played.keys():
+    #     playSum+=pl
+    # print(playSum)
     
+        
 ###genres 내 genre당 수 구하기
     for gr in genres:
         # for pl in plays:
         genreCnt[gr]=0
-        # print(gr)    
     
     for gernreCntKey in genreCnt.keys(): 
         for gr in genres:
             if gernreCntKey==gr:
                 genreCnt[gernreCntKey]+=1 
-
-
-    glplList=list(zip(genres,plays))
-    for i,(gr,pl) in enumerate(glplList):
-        print(i,gr,pl)
-        played[pl]=gr
-    print(played)
+    print(genreCnt)
+    
+    
     return answer
-
 
 solution(["classic","pop","classic","classic","pop"],[500, 600, 150, 800, 2500])
 
