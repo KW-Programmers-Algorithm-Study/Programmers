@@ -20,7 +20,7 @@ def solution(s):
     if st!=[]: #'('와 ')'의 짝이 맞아 스택 내 전부가 pop 되어 빈 스택이 됐다면
         answer=False
     # print(st)
-    print(answer)
+    # print(answer)
     return answer
 
 solution("()()")
