@@ -1,5 +1,5 @@
 def solution(progresses, speeds):
-    answer = [] #여기에 작업 완료되는 순서대로 각 배열에서 빼서 넣기(pop(0) 사용)
+    answer = [] #각 배열에서 작업 완료되는 순서대로 빼서 넣기(pop(0) 사용)
 
     while progresses: #작업 리스트가 빌 때까지
         cnt=0 #배포 기능 개수    
@@ -19,8 +19,8 @@ def solution(progresses, speeds):
     print("answer: ",answer)
     return answer
 
-solution([93,30,55],[1,30,5]) #7일, 3일, 9일 후 완료, (100-prg)%spd 에서 0이면 완료, !0이면 +1: [2,1]
-solution([95, 90, 99, 99, 80, 99],[1, 1, 1, 1, 1, 1])# 5,10,1,1,20,1일 후 완료: [1,3,2]
+# solution([93,30,55],[1,30,5]) #7일, 3일, 9일 후 완료, (100-prg)%spd 에서 0이면 완료, !0이면 +1: [2,1]
+# solution([95, 90, 99, 99, 80, 99],[1, 1, 1, 1, 1, 1])# 5,10,1,1,20,1일 후 완료: [1,3,2]
 
 
 
