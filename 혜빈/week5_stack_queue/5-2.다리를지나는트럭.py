@@ -15,7 +15,7 @@ def solution(bridge_length, weight, truck_weights):
                 brgW += bridge[-1] #다리위 무게 갱신
             else:  # 넘으면
                 bridge.append(0) #0을 채워 다리의 길이 유지
-    # print(answer)
+    print(answer)
     return answer
 solution(2,10,[7,4,5,6]) #8
 solution(100,100,[10]) #101
