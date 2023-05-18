@@ -1,7 +1,6 @@
-def solution(n):
-    answer=0
+def solution(s):
+    answer=""
     
-    print(answer)
     return answer
 
 solution(45)
