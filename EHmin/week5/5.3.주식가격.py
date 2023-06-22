@@ -2,7 +2,7 @@ import numpy as np
 from collections import deque
 
 def solution(prices):
-    answer = []
+    # answer = []
     # for i in range(len(prices)):
     #     count = 0
     #     for j in prices[i+1:]:
@@ -10,6 +10,7 @@ def solution(prices):
     #         if j < prices[i]:
     #             break
     #     answer.append(count)
+    
     queue = deque(prices)
     answer = []
     
