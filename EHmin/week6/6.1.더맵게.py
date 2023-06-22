@@ -4,7 +4,9 @@ def solution(scoville, K):
     heap = scoville
     heapify(heap)
     count = 0
-    while (heap[0] < K) and len(heap) > 1:
+    while (heap[0] < K):
+        if len(heap) == 1:
+            return -1
         smallest = heappop(heap)
         smallest += heappop(heap) * 2
         heappush(heap, smallest)
