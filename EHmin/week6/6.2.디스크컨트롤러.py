@@ -2,23 +2,36 @@ from heapq import *
 
 def solution(jobs):
     request_time = [tuple(job) for job in jobs]
-    heapify(request_time) # 튜플로 넣어 줘야 하는데 
-    print(request_time)
-    time_cost = []
+    heapify(request_time)
+    current_time = request_time[0][0]
     next_candidate = []
+    heapify(next_candidate)
+    time_cost = []
+    nothing_todo = True
   
-    for i in range(len(request_time)):
-        if not time_cost: 
-            time_cost.append(heappop(request_time)[1])
-            continue
-        print(time_cost)
-        while request_time and (request_time[0][0] <= time_cost[-1]):
-            heappush(next_candidate, heappop(request_time)[1])
-            print(next_candidate)
-        time_cost.append(heappop(next_candidate) + time_cost[-1])
-    
-    return sum(time_cost)/len(time_cost)
+    while request_time or next_candidate :
+        # print()
+        while request_time and (request_time[0][0] <= current_time):
+            item_r = heappop(request_time)
+            heappush(next_candidate, (item_r[1], item_r[0]))
+            nothing_todo = False
+            
+        # print(next_candidate)
+        
+        if nothing_todo:
+            current_time = request_time[0][0]
+        else:
+            item_n = heappop(next_candidate)
+            current_time += item_n[0]
+            time_cost.append(current_time - item_n[1])
+            if not next_candidate:
+                nothing_todo = True
+            # print(current_time)
+            # print(time_cost)
+        
+        
+    return int(sum(time_cost)/len(time_cost))
 
-jobs = [[0, 3], [1, 9], [2, 6]]
+jobs = [[0, 10], [0, 1], [0, 1]]
 
 print(solution(jobs))
