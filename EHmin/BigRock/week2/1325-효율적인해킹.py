@@ -5,60 +5,60 @@
 # # 그런데 신뢰하는게 모두 없다면?? ㅁ도ㅜ 따리 따리 한다면 ?? 상과 없음 
 
 # # DFS 탐색 
-# import sys
+import sys
 
-# sys.setrecursionlimit(1000)
+sys.setrecursionlimit(1000)
 
-# def DFS(start,m, visited):
-#     global temp 
-#     for node in m[start]:
-#         if visited[node] == True: continue
-#         temp += 1
-#         visited[node] = True
-#         DFS(node,m, visited)
+def DFS(start,m, visited):
+    global temp 
+    for node in m[start]:
+        if visited[node] == True: continue
+        temp += 1
+        visited[node] = True
+        DFS(node,m, visited)
         
-# # 입력 받기 
-# N,M = map(int, input().split())
+# 입력 받기 
+N,M = map(int, input().split())
 
-# # 신뢰 리스트 생성 t_l 
-# t_l = [[] for _ in range(N)]
-# # is_root = [True for _ in range(N)]
+# 신뢰 리스트 생성 t_l 
+t_l = [[] for _ in range(N)]
+# is_root = [True for _ in range(N)]
 
-# # 연결 리스트 생성 , 신뢰 리스트에 같이 저장 해주기 
-# for _ in range(M):
-#     a, b = map(int, input().split())
-#     # is_root[a-1] = False # a는 1부터 들어오기 때문에 -1 처리 
-#     t_l[b-1].append(a-1) # 신뢰 받는 방향으로 뻗을 수 있게 링크 생성
+# 연결 리스트 생성 , 신뢰 리스트에 같이 저장 해주기 
+for _ in range(M):
+    a, b = map(int, input().split())
+    # is_root[a-1] = False # a는 1부터 들어오기 때문에 -1 처리 
+    t_l[b-1].append(a-1) # 신뢰 받는 방향으로 뻗을 수 있게 링크 생성
 
-# # 신뢰 리스트 순회하면서 DFS, Count Global로 만들어서 진행 
-# count = 0
-# candidate = [0]
-# for i in range(N):
-#     # if not is_root[i]: continue
-#     visited = [False for _ in range(N)]
-#     temp = 1
-#     visited[i] = True
-#     DFS(i,t_l, visited)
-#     if count > temp: continue
-#     elif count < temp :
-#         candidate.clear()
-#         candidate.append(i+1)
-#     elif count == temp:
-#         candidate.append(i+1)
-#     count = max(count, temp)
-#     visited.clear()
-#     # print(temp)
-#     # print(candidate)
+# 신뢰 리스트 순회하면서 DFS, Count Global로 만들어서 진행 
+count = 0
+candidate = [0]
+for i in range(N):
+    # if not is_root[i]: continue
+    visited = [False for _ in range(N)]
+    temp = 1
+    visited[i] = True
+    DFS(i,t_l, visited)
+    if count > temp: continue
+    elif count < temp :
+        candidate.clear()
+        candidate.append(i+1)
+    elif count == temp:
+        candidate.append(i+1)
+    count = max(count, temp)
+    visited.clear()
+    # print(temp)
+    # print(candidate)
 
     
-# # ans = []
+# ans = []
 
-# # for item in candidate:
-# #     if item[1] == count:
-# #         ans.append(item[0])
+# for item in candidate:
+#     if item[1] == count:
+#         ans.append(item[0])
 
-# candidate.sort()
-# print(*candidate)
+candidate.sort()
+print(*candidate)
 # BFS로 풀어야함 ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ
 
 
