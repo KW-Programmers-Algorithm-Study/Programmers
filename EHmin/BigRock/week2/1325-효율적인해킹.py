@@ -59,7 +59,7 @@ for i in range(N):
 
 candidate.sort()
 print(*candidate)
-# BFS로 풀어야함 ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ
+# BFS로 풀어야함 ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ
 
 
 # 입력 받기 
